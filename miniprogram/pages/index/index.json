@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "xr-start": "../../components/x_fram_start/index"
+  },
+  "disableScroll": true
+}

@@ -1,0 +1,43 @@
+<xr-scene>
+	  <!-- 加载材质 --> 
+		<!-- 默认材质 -->
+		<!-- <xr-asset-material asset-id="simple" effect="simple" uniforms="u_baseColorFactor:0.8 0.4 0.4 1"></xr-asset-material> -->
+		<!-- <xr-mesh node-id="cube" geometry="cube" material="simple"></xr-mesh> -->
+
+		<!-- 加光照 -->
+		<!-- 环境光 -->
+		<!-- <xr-light type="ambient" color="1 1 1" iniensity="1"></xr-light> -->
+		<!-- 方向光 光强为3 开启投影 -->
+		<!-- <xr-light type="directional" rotation="40 70 0" color="1 1 1" iniensity="3" cast-shadow></xr-light> -->
+		<!-- <xr-mesh node-id="cube" geometry="cube" cast-shadow uniforms="u_baseColorFactor:0.8 0.4 0.4 1"></xr-mesh>
+
+		<xr-mesh geometry="plane" position="0 -2 0" scale="10 1 10" receive-shadow></xr-mesh> -->
+
+		<!-- 添加图片 -->
+		<!-- 添加环境 -->
+			<!-- 加载资源 xr-env -->
+			<xr-assets>
+				<xr-asset-load type="texture" asset-id="test_tx01" src="https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/waifu.png"></xr-asset-load>
+				<!-- 加载视频资源 -->
+				<xr-asset-load type="video-texture" asset-id="video01" src="https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/videos/office-skybox.mp4" options="autoPlay:true,loop:true"></xr-asset-load>
+			</xr-assets>
+			<!-- 添加环境 -->
+			<!-- <xr-env env-data="xr-frame-team-workspace-day"></xr-env> -->
+
+			<!-- 添加视频 -->
+			<xr-env env-data="xr-frame-team-workspace-day" sky-map="video-video01"></xr-env>
+			
+
+			<!-- 添加光源 -->
+			<xr-light type="ambient" color="0.4 0.4 0.6"  iniensity="1"></xr-light>
+			<xr-light type="directional" rotation="70 30 50" iniensity="3" color="1 1 1" cast-shadow></xr-light>
+			<xr-mesh node-id="cube01" cast-shadow geometry="cube" uniforms="u_baseColorMap:test_tx01"></xr-mesh>
+
+			<xr-mesh geometry="plane" position="0 -1 0" scale="10 1 10" color="0.3 0.3 0.5" receive-shadow></xr-mesh>
+
+    <!-- <xr-camera clear-color="0.4 0.8 0.6 1" position="0 2 -3" target="cube01" camera-orbit-control></xr-camera> -->
+		<!-- 天空盒子 -->
+		<xr-camera clear-color="0.4 0.8 0.6 1" position="0 2 -3" target="cube01" background="skybox" camera-orbit-control></xr-camera>
+</xr-scene>
+
+

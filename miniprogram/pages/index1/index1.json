@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "xr_test": "../../components/x_Fram_Learn/x_fram_Test"
+  },
+  "disableScroll": true,
+  "navigationBarTitleText": "测试2"
+}

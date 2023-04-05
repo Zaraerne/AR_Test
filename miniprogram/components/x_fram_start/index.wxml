@@ -1,0 +1,22 @@
+
+<xr-scene>
+	<xr-assets>
+		<xr-asset-load type="gltf" asset-id="damage-helmet" src="https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/damage-helmet/index.glb" />
+		<xr-asset-load type="gltf" asset-id="miku" src="https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/miku.glb" />
+</xr-assets>
+	<xr-env env-data="xr-frame-team-workspace-day" sky-map="weakme" is-sky2d />
+
+
+
+<xr-gltf node-id="damage-helmet" model="damage-helmet" id="helmet" mesh-shape bind:touch-shape="handleTouchModel" />
+
+<xr-gltf model="miku" position="-0.15 0.75 0" scale="0.07 0.07 0.07" rotation="0 180 0" anim-autoplay id="miku" cube-shape="autoFit:true" shape-gizmo  bind:touch-shape="handleTouchModel" />
+
+<xr-light type="ambient" color="1 1 1" intensity="1" />
+<xr-light type="directional" rotation="40 70 0" color="1 1 1" intensity="3" cast-shadow />
+
+<xr-camera
+  position="0 1.5 4" target="damage-helmet" background="skybox"
+  clear-color="0.4 0.8 0.6 1" camera-orbit-control
+/>
+</xr-scene>
